@@ -1,8 +1,8 @@
 using System.Security.Claims;
 using System.Text.Json;
+using Forum.Infrastructure.Data;
 using Forum.Web.Components.Account.Pages;
 using Forum.Web.Components.Account.Pages.Manage;
-using Forum.Web.Data;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Components.Authorization;
 using Microsoft.AspNetCore.Http.Extensions;

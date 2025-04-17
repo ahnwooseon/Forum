@@ -2,7 +2,7 @@
 
 #nullable disable
 
-namespace Forum.Web.Migrations;
+namespace Forum.Infrastructure.Data.Migrations;
 
 /// <inheritdoc />
 public partial class CreateIdentitySchema : Migration

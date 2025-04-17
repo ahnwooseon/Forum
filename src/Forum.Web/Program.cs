@@ -1,6 +1,6 @@
 using Forum.Web.Components;
 using Forum.Web.Components.Account;
-using Forum.Web.Data;
+using Forum.Infrastructure.Data;
 using Microsoft.AspNetCore.Components.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
