@@ -1,6 +1,7 @@
 <Solution>
   <Project Path="src/Forum.ApiService/Forum.ApiService.csproj" />
   <Project Path="src/Forum.AppHost/Forum.AppHost.csproj" />
+  <Project Path="src/Forum.Application/Forum.Application.csproj" />
   <Project Path="src/Forum.Domain/Forum.Domain.csproj" />
   <Project Path="src/Forum.Infrastructure/Forum.Infrastructure.csproj" />
   <Project Path="src/Forum.ServiceDefaults/Forum.ServiceDefaults.csproj" />
