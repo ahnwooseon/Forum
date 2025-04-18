@@ -1,7 +1,8 @@
-﻿@using Microsoft.AspNetCore.Identity
+﻿@using Forum.Domain.Entities
+@using Microsoft.AspNetCore.Identity
 @using Forum.Infrastructure.Data
 
-@inject SignInManager<ApplicationUser> SignInManager
+@inject SignInManager<User> SignInManager
 
 <ul class="nav nav-pills flex-column">
     <li class="nav-item">

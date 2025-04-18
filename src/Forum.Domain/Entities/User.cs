@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Identity;
 
-namespace Forum.Infrastructure.Data;
+namespace Forum.Domain.Entities;
 
 // Add profile data for application users by adding properties to the ApplicationUser class
-public class ApplicationUser : IdentityUser { }
+public class User : IdentityUser { }

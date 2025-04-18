@@ -1,5 +1,6 @@
 using System.Security.Claims;
 using System.Text.Json;
+using Forum.Domain.Entities;
 using Forum.Infrastructure.Data;
 using Forum.Web.Components.Account.Pages;
 using Forum.Web.Components.Account.Pages.Manage;
@@ -27,7 +28,7 @@ internal static class IdentityComponentsEndpointRouteBuilderExtensions
             "/PerformExternalLogin",
             (
                 HttpContext context,
-                [FromServices] SignInManager<ApplicationUser> signInManager,
+                [FromServices] SignInManager<User> signInManager,
                 [FromForm] string provider,
                 [FromForm] string returnUrl
             ) =>
@@ -56,7 +57,7 @@ internal static class IdentityComponentsEndpointRouteBuilderExtensions
             "/Logout",
             async (
                 ClaimsPrincipal user,
-                [FromServices] SignInManager<ApplicationUser> signInManager,
+                [FromServices] SignInManager<User> signInManager,
                 [FromForm] string returnUrl
             ) =>
             {
@@ -71,7 +72,7 @@ internal static class IdentityComponentsEndpointRouteBuilderExtensions
             "/LinkExternalLogin",
             async (
                 HttpContext context,
-                [FromServices] SignInManager<ApplicationUser> signInManager,
+                [FromServices] SignInManager<User> signInManager,
                 [FromForm] string provider
             ) =>
             {
@@ -100,7 +101,7 @@ internal static class IdentityComponentsEndpointRouteBuilderExtensions
             "/DownloadPersonalData",
             async (
                 HttpContext context,
-                [FromServices] UserManager<ApplicationUser> userManager,
+                [FromServices] UserManager<User> userManager,
                 [FromServices] AuthenticationStateProvider authenticationStateProvider
             ) =>
             {
@@ -120,7 +121,7 @@ internal static class IdentityComponentsEndpointRouteBuilderExtensions
 
                 // Only include personal data for download
                 var personalData = new Dictionary<string, string>();
-                var personalDataProps = typeof(ApplicationUser)
+                var personalDataProps = typeof(User)
                     .GetProperties()
                     .Where(prop => Attribute.IsDefined(prop, typeof(PersonalDataAttribute)));
                 foreach (var p in personalDataProps)

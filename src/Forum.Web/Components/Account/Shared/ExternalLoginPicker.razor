@@ -1,8 +1,9 @@
-﻿@using Microsoft.AspNetCore.Authentication
+﻿@using Forum.Domain.Entities
+@using Microsoft.AspNetCore.Authentication
 @using Microsoft.AspNetCore.Identity
 @using Forum.Infrastructure.Data
 
-@inject SignInManager<ApplicationUser> SignInManager
+@inject SignInManager<User> SignInManager
 @inject IdentityRedirectManager RedirectManager
 
 @if (externalLogins.Length == 0)
