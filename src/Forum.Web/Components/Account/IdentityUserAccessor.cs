@@ -1,5 +1,4 @@
 using Forum.Domain.Entities;
-using Forum.Infrastructure.Data;
 using Microsoft.AspNetCore.Identity;
 
 namespace Forum.Web.Components.Account;

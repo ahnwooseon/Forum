@@ -1,6 +1,5 @@
 using System.Security.Claims;
 using Forum.Domain.Entities;
-using Forum.Infrastructure.Data;
 using Microsoft.AspNetCore.Components.Authorization;
 using Microsoft.AspNetCore.Components.Server;
 using Microsoft.AspNetCore.Identity;
